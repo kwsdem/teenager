@@ -1,15 +1,12 @@
 <div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://placehold.it/64x64" alt="...">
-    </a>
-  </div>
   <div class="media-body">
     <h4 class="media-heading">
-      <%= conversation.originator.name %> <br>
-      <small><b>Date: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+      <br><%= render 'shared/avatar', user: conversation.originator %>
+      <%= conversation.originator.name %><small><b> and </b><%= conversation.recipients %></small>
+      <div class="pull-right">
+      <small><b>Date: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small></div>
     </h4>
-    <%= truncate conversation.messages.last.body, length: 145 %>
+    <%= truncate conversation.subject %>
     <%= link_to "View", conversation_path(conversation)  %>
   </div>
 </div>
