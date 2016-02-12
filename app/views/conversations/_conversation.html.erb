@@ -1,12 +1,17 @@
-<div class="media">
-  <div class="media-body">
-    <h4 class="media-heading">
-      <br><%= render 'shared/avatar', user: conversation.originator %>
-      <%= conversation.originator.name %><small><b> and </b><%= conversation.recipients %></small>
-      <div class="pull-right">
-      <small><b>Date: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small></div>
-    </h4>
-    <%= truncate conversation.subject %>
-    <%= link_to "View", conversation_path(conversation)  %>
+<%= form_for :conversation, url: :conversations, html: { class: "" } do |f| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <br><%= render 'shared/avatar', user: conversation.originator %>
+        <%= conversation.originator.name %><small><b> and </b></small>
+        <% conversation.messages.each do |message| %>
+          <%= message.recipients.first.name %>
+        <% end %>
+        <div class="pull-right">
+        <small><b>Date: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small></div>
+      </h4>
+      <%= truncate conversation.subject %>
+      <%= link_to "View", conversation_path(conversation)  %>
+    </div>
   </div>
-</div>
+<% end %>
