@@ -29,10 +29,9 @@
         </div>
         
         <div class="form-group">
-          <%= f.label :school %>
-          <%= f.select :school, noptions_for_seasons, class: 'form-control' %>
+          <%= f.label :school %><br>
+          <%= f.select :school, noptions_for_seasons, class: 'form-control', prompt: 'Select One' %>
         </div>
-
 
         <div class="form-group">
           <%= f.label :birthday %>

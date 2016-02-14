@@ -8,7 +8,7 @@ module UsersHelper
   end
 
   def noptions_for_seasons
-    [['5o gimnasio'], ['3o gimnasio']]
+    [[ '5ο Γυμνάσιο'], ['3ο Γυμνάσιο']]
   end
 
   def age(dob)
