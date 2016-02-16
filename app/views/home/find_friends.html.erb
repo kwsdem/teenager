@@ -3,7 +3,7 @@
     <%= render 'shared/user_info' %>
   </div>
   <div class="col-lg-6 well">
-    <h3>Find New Friends</h3>
+    <h3>Βρείτε καινούριους φίλους</h3>
     <hr>
     <div id="users">
       <%= render @users.sort {|a,b| a.name <=> b.name } || render('shared/no_resource', resources: 'Users') %>

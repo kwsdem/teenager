@@ -10,11 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="
-  <% if @user.sex == "male" %> 
-    boys-bg 
-  <% end %>
-  <% if @user.sex == "female" %>
-    girls-bg
+  <% if user_signed_in? %>
+    <% if current_user.sex == "male" %> 
+      boys-bg 
+    <% end %>
+    <% if current_user.sex == "female" %>
+      girls-bg
+    <% else %>
+      else
+    <% end %>
+  <% else %>
+    else
   <% end %>
   ">
       <%= render 'shared/navbar' %>

@@ -15,12 +15,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: $navbar-color;
 }
 
+.else{
+  background-color: $bg-color;
+}
+
 .boys-bg{
-  background: image-url('2.jpg') fixed;
+  background-color: $bg-color;
 }
 
 .girls-bg{
-  background: image-url('1.jpg') fixed;
+  background-color: $bg-color;
 }
 
 .navbar-brand {

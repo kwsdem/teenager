@@ -4,7 +4,7 @@
 
 module UsersHelper
   def options_for_seasons
-    [['Male', 'male'], ['Female', 'female']]
+    [['Αγόρι', 'male'], ['Κορίτσι', 'female']]
   end
 
   def noptions_for_seasons

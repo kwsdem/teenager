@@ -10,7 +10,7 @@
   <% if @user.birthday.present? %>
     <h5>
       <%= fa_icon @user.sex %>
-      <%= "#{pluralize(age(@user.birthday), 'year')} old" %>
+      <%= "#{pluralize(age(@user.birthday), '')} χρονών" %>
     </h5>
   <% end %>
 
