@@ -5,12 +5,13 @@
     </div>
     <div class="form-group">
      	<%= f.label :"Θέμα" %>
-     	<%= f.text_field :"Θέμα" placeholder: "Subject", class: "form-control" %>
+     	<%= f.text_field :Subject, placeholder: "Θέμα", class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :"Μύνημα" %>
       <%= f.text_area :body, class: 'form-control',placeholder: "Γράψτε το μύνημά σας εδώ....", rows: 4  %>
     </div>
+
 
     <%= f.submit "Αποστολή", class: "btn btn-success" %>
 
